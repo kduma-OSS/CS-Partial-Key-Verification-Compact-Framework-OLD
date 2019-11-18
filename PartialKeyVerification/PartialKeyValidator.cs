@@ -85,7 +85,7 @@ namespace PartialKeyVerification
         {
             //converts the sting key back into a byte array, removing
             //any separators.
-            key = key.ToUpperInvariant();
+            key = key.ToUpper();
             var pos = key.IndexOf('-');
             while (pos > -1)
             {

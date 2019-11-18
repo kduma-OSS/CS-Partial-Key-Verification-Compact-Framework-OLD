@@ -9,3 +9,5 @@ _ReSharper*
 *.nupkg
 packages
 .vs
+.DS_Store
+/TestResults

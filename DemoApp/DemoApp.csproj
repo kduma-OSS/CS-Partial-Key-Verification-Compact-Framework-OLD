@@ -4,16 +4,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{53048C78-DBCE-49CA-8959-0B78A0010E50}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PartialKeyVerification</RootNamespace>
-    <AssemblyName>PartialKeyVerification</AssemblyName>
+    <RootNamespace>DemoApp</RootNamespace>
+    <AssemblyName>DemoApp</AssemblyName>
     <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <PlatformFamilyName>PocketPC</PlatformFamilyName>
     <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
     <OSVersion>5.2</OSVersion>
-    <DeployDirSuffix>PartialKeyVerification</DeployDirSuffix>
+    <DeployDirSuffix>DemoApp</DeployDirSuffix>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
     <FormFactorID>
@@ -51,26 +51,48 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base32.cs" />
-    <Compile Include="Checksum\Adler16.cs" />
-    <Compile Include="Checksum\Crc16.cs" />
-    <Compile Include="Checksum\CrcCcitt.cs" />
-    <Compile Include="Checksum\IChecksum16.cs" />
-    <Compile Include="Checksum\IChecksum32.cs" />
-    <Compile Include="Hash\Crc32.cs" />
-    <Compile Include="Hash\Fnv1A.cs" />
-    <Compile Include="Hash\GeneralizedCrc.cs" />
-    <Compile Include="Hash\IHash.cs" />
-    <Compile Include="Hash\Jenkins06.cs" />
-    <Compile Include="Hash\Jenkins96.cs" />
-    <Compile Include="Hash\OneAtATime.cs" />
-    <Compile Include="Hash\SuperFast.cs" />
-    <Compile Include="PartialKeyGenerator.cs" />
-    <Compile Include="PartialKeyValidator.cs" />
+    <Compile Include="DemoValidator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemoValidator.Designer.cs">
+      <DependentUpon>DemoValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Keygen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Keygen.Designer.cs">
+      <DependentUpon>Keygen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DemoValidator.resx">
+      <DependentUpon>DemoValidator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Keygen.resx">
+      <DependentUpon>Keygen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PartialKeyVerification\PartialKeyVerification.csproj">
+      <Project>{53048C78-DBCE-49CA-8959-0B78A0010E50}</Project>
+      <Name>PartialKeyVerification</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
   <ProjectExtensions>

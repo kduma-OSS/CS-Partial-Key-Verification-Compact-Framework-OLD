@@ -1,31 +1,43 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialKeyTests", ".\PartialKeyTests\PartialKeyTests.csproj", "{7C4DAEB1-E85E-44EE-A693-7B1693103DAD}"
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialKeyVerification", "PartialKeyVerification\PartialKeyVerification.csproj", "{53048C78-DBCE-49CA-8959-0B78A0010E50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialKeyVerification", ".\PartialKeyVerification\PartialKeyVerification.csproj", "{09E9375B-61DE-426E-B5C5-B57989144F92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartialKeyTests", "PartialKeyTests\PartialKeyTests.csproj", "{A4D46C05-914B-4F9E-9870-5CA590EB865C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{88F9BF82-9711-4463-B3A3-F3DBB6AEB606}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+		PartialKeyVerification.vsmdi = PartialKeyVerification.vsmdi
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}"
 EndProject
 Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = PartialKeyVerification.vsmdi
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C4DAEB1-E85E-44EE-A693-7B1693103DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C4DAEB1-E85E-44EE-A693-7B1693103DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C4DAEB1-E85E-44EE-A693-7B1693103DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C4DAEB1-E85E-44EE-A693-7B1693103DAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09E9375B-61DE-426E-B5C5-B57989144F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09E9375B-61DE-426E-B5C5-B57989144F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09E9375B-61DE-426E-B5C5-B57989144F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09E9375B-61DE-426E-B5C5-B57989144F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53048C78-DBCE-49CA-8959-0B78A0010E50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53048C78-DBCE-49CA-8959-0B78A0010E50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53048C78-DBCE-49CA-8959-0B78A0010E50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53048C78-DBCE-49CA-8959-0B78A0010E50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4D46C05-914B-4F9E-9870-5CA590EB865C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4D46C05-914B-4F9E-9870-5CA590EB865C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4D46C05-914B-4F9E-9870-5CA590EB865C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4D46C05-914B-4F9E-9870-5CA590EB865C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1EE1C7-7A97-4BC4-A070-1E13A9E12B7C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FBF91CB4-E0B1-4590-B733-8573AC934DF4}
 	EndGlobalSection
 EndGlobal
